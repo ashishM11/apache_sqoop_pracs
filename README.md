@@ -25,29 +25,29 @@
 
 * (-e,--query <statement> 	|Execute statement in SQL). 
 
-  sqoop-eval \
-  --connect jdbc:mysql://localhost/retail_db \
-  --username root -password cloudera \
-  --query "select * from categories limit 5"
+    sqoop-eval \
+    --connect jdbc:mysql://localhost/retail_db \
+    --username root -password cloudera \
+    --query "select * from categories limit 5"
 
-  sqoop-eval \
-  --connect jdbc:mysql://localhost/retail_db \
-  --username root -password cloudera \
-  --e "select category_id as 'catID',category_name as 'catName' from categories limit 5"
+    sqoop-eval \
+    --connect jdbc:mysql://localhost/retail_db \
+    --username root -password cloudera \
+    --e "select category_id as 'catID',category_name as 'catName' from categories limit 5"
 
 # Sqoop job Commands:
 
  * How to create sqoop job
 
-  sqoop job --create listsDB -- list-databases \
-  --connect "jdbc:mysql://localhost" \
-  --username retail_dba \
-  -P
+   sqoop job --create listsDB -- list-databases \
+   --connect "jdbc:mysql://localhost" \
+   --username retail_dba \
+   -P
 
-  sqoop job --create listsTabs -- list-tables \
-  --connect "jdbc:mysql://localhost/retail" \
-  --username retail_dba \
-  -P
+   sqoop job --create listsTabs -- list-tables \
+   --connect "jdbc:mysql://localhost/retail" \
+   --username retail_dba \
+   -P
 
  * How to run Sqoop Job	
 
