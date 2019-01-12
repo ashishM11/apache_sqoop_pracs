@@ -37,7 +37,7 @@ sqoop-eval \
  
 # Sqoop job Commands:
 ---------------------------------------------------
-->>	1.How to create sqoop job
+1.How to create sqoop job
 ---------------------------------------------------
 sqoop job --create listsDB -- list-databases \
 --connect "jdbc:mysql://localhost" \
@@ -49,18 +49,18 @@ sqoop job --create listsTabs -- list-tables \
 --username retail_dba \
 -P
 ---------------------------------------------------
-->>	2.How to run Sqoop Job	
+2.How to run Sqoop Job	
 ---------------------------------------------------
-sqoop job --exec <<Job-Name>>
+sqoop job --exec <Job-Name>
 ---------------------------------------------------
-->>	3.List all the Sqoop Jobs
+3.List all the Sqoop Jobs
 ---------------------------------------------------
 sqoop job --list
 ---------------------------------------------------
-->>	4.how to check SQOOP parameters in Jobs
+4.how to check SQOOP parameters in Jobs
 ---------------------------------------------------
-sqoop job --show <<Job-Name>>
+sqoop job --show <Job-Name>
 ---------------------------------------------------
 ->>	5.How to delete SQOOP Jobs
 ---------------------------------------------------
-sqoop job --delete <<Job-Name>>
+sqoop job --delete <Job-Name>
