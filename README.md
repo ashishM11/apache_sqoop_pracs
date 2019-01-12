@@ -31,7 +31,7 @@
 		sqoop eval \
 		--connect "jdbc:mysql://localhost/classicmodels" \
 		--username root -P \
-		--query "insert into employees values(1101,'Ashish','tiwari','x1991','acesoftology@gmail.com',1,1002,'Software Developer')"
+		--query "insert into employees values(1101,'Ashish','tiwari','x1991','abc@gmail.com',1,1002,'S/W Developer')"
 
 		sqoop eval \
 		--connect "jdbc:mysql://localhost/classicmodels" \
@@ -75,62 +75,58 @@
 		--target-dir /sqoop/nye/classicmodels/empl-freeform2 \
 		--as-avrodatafile
 
-	*	NOTE:
-
-   --split-by is used to distribute the values from table across the mappers uniformly i.e. say u have 100 unique records(primary key) and if there are 4 mappers, --split-by (primary key column) will help to distribute you data-set evenly among the mappers.
-
-   $CONDITIONS is used by Sqoop process, it will replace with a unique condition expression internally to get the data-set. If you run a parallel import, the map tasks will execute your query with different values substituted in for $CONDITIONS. e.g., one mapper may execute "select bla from foo WHERE (id >=0 AND id < 10000)", and the next mapper may execute "select bla from foo WHERE (id >= 10000 AND id < 20000)" and so on.
+	*	NOTE: --split-by is used to distribute the values from table across the mappers uniformly i.e. say u have 100 unique records(primary key) and if there are 4 mappers, --split-by (primary key column) will help to distribute you data-set evenly among the mappers.$CONDITIONS is used by Sqoop process, it will replace with a unique condition expression internally to get the data-set. If you run a parallel import, the map tasks will execute your query with different values substituted in for $CONDITIONS. e.g., one mapper may execute "select bla from foo WHERE (id >=0 AND id < 10000)", and the next mapper may execute "select bla from foo WHERE (id >= 10000 AND id < 20000)" and so on.
 
 # sqoop lists commands:
 
-  sqoop list-databases \
-  --connect jdbc:mysql://localhost \
-  --username root -password cloudera
+	  sqoop list-databases \
+	  --connect jdbc:mysql://localhost \
+	  --username root -password cloudera
 
-  sqoop list-tables \
-  --connect jdbc:mysql://localhost/retail_db \
-  --username root -password cloudera
+	  sqoop list-tables \
+	  --connect jdbc:mysql://localhost/retail_db \
+	  --username root -password cloudera
 
 # sqoop Eval Commands:
 
 * (-e,--query <statement> 	|Execute statement in SQL). 
 
-    sqoop-eval \
-    --connect jdbc:mysql://localhost/retail_db \
-    --username root -password cloudera \
-    --query "select * from categories limit 5"
+	    sqoop-eval \
+	    --connect jdbc:mysql://localhost/retail_db \
+	    --username root -password cloudera \
+	    --query "select * from categories limit 5"
 
-    sqoop-eval \
-    --connect jdbc:mysql://localhost/retail_db \
-    --username root -password cloudera \
-    --e "select category_id as 'catID',category_name as 'catName' from categories limit 5"
+	    sqoop-eval \
+	    --connect jdbc:mysql://localhost/retail_db \
+	    --username root -password cloudera \
+	    --e "select category_id as 'catID',category_name as 'catName' from categories limit 5"
 
 # Sqoop job Commands:
 
  * How to create sqoop job
 
-   sqoop job --create listsDB -- list-databases \
-   --connect "jdbc:mysql://localhost" \
-   --username retail_dba \
-   -P
+	   sqoop job --create listsDB -- list-databases \
+	   --connect "jdbc:mysql://localhost" \
+	   --username retail_dba \
+	   -P
 
-   sqoop job --create listsTabs -- list-tables \
-   --connect "jdbc:mysql://localhost/retail" \
-   --username retail_dba \
-   -P
+	   sqoop job --create listsTabs -- list-tables \
+	   --connect "jdbc:mysql://localhost/retail" \
+	   --username retail_dba \
+	   -P
 
  * How to run Sqoop Job	
 
-  sqoop job --exec [Job-Name]
+ 	 sqoop job --exec [Job-Name]
 
 * List all the Sqoop Jobs
 
-  sqoop job --list
+  	sqoop job --list
 
 * how to check SQOOP parameters in Jobs
 
-  sqoop job --show [Job-Name]
+  	sqoop job --show [Job-Name]
   
 * How to delete SQOOP Jobs
 
-  sqoop job --delete [Job-Name]
+  	sqoop job --delete [Job-Name]
