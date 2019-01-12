@@ -74,7 +74,7 @@
 		--target-dir /sqoop/nye/classicmodels/empl-freeform2 \
 		--as-avrodatafile
 
-*	NOTE: --split-by is used to distribute the values from table across the mappers uniformly i.e. say u have 100 unique records(primary key) and if there are 4 mappers, --split-by (primary key column) will help to distribute you data-set evenly among the mappers.$CONDITIONS is used by Sqoop process, it will replace with a unique condition expression internally to get the data-set. If you run a parallel import, the map tasks will execute your query with different values substituted in for $CONDITIONS. e.g., one mapper may execute "select bla from foo WHERE (id >=0 AND id < 10000)", and the next mapper may execute "select bla from foo WHERE (id >= 10000 AND id < 20000)" and so on.
+*	Note: --split-by is used to distribute the values from table across the mappers uniformly i.e. say u have 100 unique records(primary key) and if there are 4 mappers, --split-by (primary key column) will help to distribute you data-set evenly among the mappers.$CONDITIONS is used by Sqoop process, it will replace with a unique condition expression internally to get the data-set. If you run a parallel import, the map tasks will execute your query with different values substituted in for $CONDITIONS. e.g., one mapper may execute "select bla from foo WHERE (id >=0 AND id < 10000)", and the next mapper may execute "select bla from foo WHERE (id >= 10000 AND id < 20000)" and so on.
 
 # sqoop lists commands:
 
