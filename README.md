@@ -63,8 +63,7 @@
 
 	*	4.2 => Sqoop Free-form Query Imports:
 
-		Note:
-  * The facility of using free-form query in the current version of Sqoop 1.x is limited to simple queries where there are no ambiguous projections and no OR conditions in the WHERE clause.
+  *	Note: The facility of using free-form query in the current version of Sqoop 1.x is limited to simple queries where there are no ambiguous projections and no OR conditions in the WHERE clause.
 		* Use of complex queries such as queries that have sub-queries or joins leading to ambiguous projections can lead to unexpected results.
 
 		sqoop import \
