@@ -12,29 +12,29 @@
   * PostgreSQL
 
 # sqoop lists commands:
----------------------------------------------------
+-------------------------
 sqoop list-databases \
 --connect jdbc:mysql://localhost \
 --username root -password cloudera
----------------------------------------------------
+
 sqoop list-tables \
 --connect jdbc:mysql://localhost/retail_db \
 --username root -password cloudera
----------------------------------------------------
 
-# sqoop Eval Commands: (-e,--query <statement> 	|Execute statement in SQL). 
-------------------------------------------------------------------------------------------------------
-sqoop-eval \
---connect jdbc:mysql://localhost/retail_db \
---username root -password cloudera \
---query "select * from categories limit 5"
-------------------------------------------------------------------------------------------------------
-sqoop-eval \
---connect jdbc:mysql://localhost/retail_db \
---username root -password cloudera \
---e "select category_id as 'catID',category_name as 'catName' from categories limit 5"
-------------------------------------------------------------------------------------------------------
- 
+# sqoop Eval Commands:
+----------------------------------------------------------------------------
+* (-e,--query <statement> 	|Execute statement in SQL). 
+----------------------------------------------------------------------------
+  sqoop-eval \
+  --connect jdbc:mysql://localhost/retail_db \
+  --username root -password cloudera \
+  --query "select * from categories limit 5"
+
+  sqoop-eval \
+  --connect jdbc:mysql://localhost/retail_db \
+  --username root -password cloudera \
+  --e "select category_id as 'catID',category_name as 'catName' from categories limit 5"
+
 # Sqoop job Commands:
 
  * How to create sqoop job
