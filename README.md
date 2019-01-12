@@ -116,16 +116,16 @@
 
  * How to run Sqoop Job	
 
- 	 sqoop job --exec [Job-Name]
+		sqoop job --exec [Job-Name]
 
 * List all the Sqoop Jobs
 
-  	sqoop job --list
+		sqoop job --list
 
 * how to check SQOOP parameters in Jobs
 
-  	sqoop job --show [Job-Name]
+  		sqoop job --show [Job-Name]
   
 * How to delete SQOOP Jobs
 
-  	sqoop job --delete [Job-Name]
+  		sqoop job --delete [Job-Name]
