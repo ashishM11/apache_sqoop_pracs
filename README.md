@@ -31,7 +31,7 @@
 		sqoop eval \
 		--connect "jdbc:mysql://localhost/classicmodels" \
 		--username root -P \
-		--query "insert into employees values(1101,'Ashish','tiwari','x1991','abc@gmail.com',1,1002,'S/W Developer')"
+		--query "insert into employees values(1101,'Ashish','tiwari','abc@gmail.com',1,1002,'S/W Developer')"
 
 		sqoop eval \
 		--connect "jdbc:mysql://localhost/classicmodels" \
