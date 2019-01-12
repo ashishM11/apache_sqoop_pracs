@@ -12,7 +12,7 @@
   * PostgreSQL
 
 # sqoop lists commands:
--------------------------
+
 sqoop list-databases \
 --connect jdbc:mysql://localhost \
 --username root -password cloudera
@@ -22,9 +22,9 @@ sqoop list-tables \
 --username root -password cloudera
 
 # sqoop Eval Commands:
-----------------------------------------------------------------------------
+
 * (-e,--query <statement> 	|Execute statement in SQL). 
-----------------------------------------------------------------------------
+
   sqoop-eval \
   --connect jdbc:mysql://localhost/retail_db \
   --username root -password cloudera \
@@ -38,7 +38,7 @@ sqoop list-tables \
 # Sqoop job Commands:
 
  * How to create sqoop job
----------------------------------------------------
+
   sqoop job --create listsDB -- list-databases \
   --connect "jdbc:mysql://localhost" \
   --username retail_dba \
@@ -50,17 +50,17 @@ sqoop list-tables \
   -P
 
  * How to run Sqoop Job	
----------------------------------------------------
+
   sqoop job --exec [Job-Name]
 
 * List all the Sqoop Jobs
----------------------------------------------------
+
   sqoop job --list
 
 * how to check SQOOP parameters in Jobs
----------------------------------------------------
+
   sqoop job --show [Job-Name]
   
 * How to delete SQOOP Jobs
----------------------------------------------------
-sqoop job --delete [Job-Name]
+
+  sqoop job --delete [Job-Name]
