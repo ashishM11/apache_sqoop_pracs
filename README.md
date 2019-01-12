@@ -13,13 +13,13 @@
 
 # sqoop lists commands:
 
-sqoop list-databases \
---connect jdbc:mysql://localhost \
---username root -password cloudera
+  sqoop list-databases \
+  --connect jdbc:mysql://localhost \
+  --username root -password cloudera
 
-sqoop list-tables \
---connect jdbc:mysql://localhost/retail_db \
---username root -password cloudera
+  sqoop list-tables \
+  --connect jdbc:mysql://localhost/retail_db \
+  --username root -password cloudera
 
 # sqoop Eval Commands:
 
