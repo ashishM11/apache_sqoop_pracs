@@ -1,4 +1,4 @@
-# apache_sqoop_pracs
+# Apache Sqoop Cheat Sheet
 
 
 * Sqoop is a hadoop component build on top of hdfs.
